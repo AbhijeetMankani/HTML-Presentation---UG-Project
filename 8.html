@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Libraries Used</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+                url('img/bg-8.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 50px 70px 30px;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #12405b;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 70px 50px;
+        }
+
+        .libraries-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            flex-grow: 1;
+        }
+
+        .library-card {
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .library-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(18, 64, 91, 0.1);
+            background-color: rgba(18, 64, 91, 0.08);
+        }
+
+        .library-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .library-icon {
+            background-color: #12405b;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .library-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #12405b;
+        }
+
+        .library-desc {
+            font-size: 20px;
+            line-height: 1.4;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        .highlight {
+            color: #12405b;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">PYTHON LIBRARIES USED</h1>
+        </div>
+        <div class="content">
+            <div class="libraries-grid">
+                <div class="library-card">
+                    <div class="library-header">
+                        <div class="library-icon">
+                            <i class="material-icons">folder</i>
+                        </div>
+                        <div class="library-name">os</div>
+                    </div>
+                    <div class="library-desc">
+                        <span class="highlight">Filesystem operations</span> - Accessing paths, creating directories,
+                        executing commands
+                    </div>
+                </div>
+                <div class="library-card">
+                    <div class="library-header">
+                        <div class="library-icon">
+                            <i class="material-icons">search</i>
+                        </div>
+                        <div class="library-name">glob</div>
+                    </div>
+                    <div class="library-desc">
+                        <span class="highlight">Pattern matching</span> - Finding files and directories matching
+                        specified patterns
+                    </div>
+                </div>
+                <div class="library-card">
+                    <div class="library-header">
+                        <div class="library-icon">
+                            <i class="material-icons">find_replace</i>
+                        </div>
+                        <div class="library-name">re</div>
+                    </div>
+                    <div class="library-desc">
+                        <span class="highlight">Regular expressions</span> - Pattern matching and string manipulation
+                    </div>
+                </div>
+                <div class="library-card">
+                    <div class="library-header">
+                        <div class="library-icon">
+                            <i class="material-icons">grid_on</i>
+                        </div>
+                        <div class="library-name">rasterio</div>
+                    </div>
+                    <div class="library-desc">
+                        <span class="highlight">Raster data processing</span> - Reading and writing gridded spatial
+                        datasets
+                    </div>
+                </div>
+                <div class="library-card">
+                    <div class="library-header">
+                        <div class="library-icon">
+                            <i class="material-icons">map</i>
+                        </div>
+                        <div class="library-name">geopandas</div>
+                    </div>
+                    <div class="library-desc">
+                        <span class="highlight">Spatial data operations</span> - Tabular format with geospatial
+                        capabilities
+                    </div>
+                </div>
+                <div class="library-card">
+                    <div class="library-header">
+                        <div class="library-icon">
+                            <i class="material-icons">functions</i>
+                        </div>
+                        <div class="library-name">numpy</div>
+                    </div>
+                    <div class="library-desc">
+                        <span class="highlight">Scientific computing</span> - Multi-dimensional arrays and mathematical
+                        operations
+                    </div>
+                </div>
+                <div class="library-card">
+                    <div class="library-header">
+                        <div class="library-icon">
+                            <i class="material-icons">category</i>
+                        </div>
+                        <div class="library-name">shapely.geometry</div>
+                    </div>
+                    <div class="library-desc">
+                        <span class="highlight">Geometric shapes</span> - Manipulation and analysis of planar geometric
+                        objects
+                    </div>
+                </div>
+                <div class="library-card">
+                    <div class="library-header">
+                        <div class="library-icon">
+                            <i class="material-icons">public</i>
+                        </div>
+                        <div class="library-name">fiona.crs</div>
+                    </div>
+                    <div class="library-desc">
+                        <span class="highlight">Coordinate systems</span> - Support for spatial reference systems
+                    </div>
+                </div>
+                <div class="library-card">
+                    <div class="library-header">
+                        <div class="library-icon">
+                            <i class="material-icons">transform</i>
+                        </div>
+                        <div class="library-name">pyproj</div>
+                    </div>
+                    <div class="library-desc">
+                        <span class="highlight">Coordinate transformations</span> - Conversions between different
+                        reference systems
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

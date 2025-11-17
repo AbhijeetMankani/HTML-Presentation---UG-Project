@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boundary 2 Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+                url('img/bg-11.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 40px 70px 20px;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #12405b;
+            margin-bottom: 15px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 70px 40px;
+            gap: 25px;
+        }
+
+        .boundary-info {
+            display: flex;
+            align-items: center;
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .boundary-info:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(18, 64, 91, 0.1);
+            background-color: rgba(18, 64, 91, 0.08);
+        }
+
+        .boundary-icon {
+            background-color: #12405b;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .boundary-icon i {
+            font-size: 28px;
+        }
+
+        .boundary-details {
+            flex-grow: 1;
+        }
+
+        .boundary-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #12405b;
+            margin-bottom: 8px;
+        }
+
+        .coordinates {
+            font-size: 20px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .coord-pair {
+            display: flex;
+            align-items: center;
+        }
+
+        .coord-label {
+            font-weight: 600;
+            color: #12405b;
+            margin-right: 5px;
+        }
+
+        .highlight {
+            color: #12405b;
+            font-weight: 600;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        .result-card {
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(18, 64, 91, 0.1);
+            background-color: rgba(18, 64, 91, 0.08);
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .result-icon {
+            background-color: #12405b;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .result-icon i {
+            font-size: 24px;
+        }
+
+        .result-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #12405b;
+        }
+
+        .result-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .result-image {
+            width: 100%;
+            height: 280px;
+            border-radius: 8px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .result-features {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-icon {
+            color: #12405b;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .composite-result {
+            grid-column: span 3;
+            display: flex;
+            gap: 25px;
+            margin-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .composite-image {
+            flex: 1;
+        }
+
+        .composite-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .composite-features {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(18, 64, 91, 0.1);
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">BOUNDARY 2 RESULTS</h1>
+        </div>
+        <div class="content">
+            <div class="boundary-info">
+                <div class="boundary-icon">
+                    <i class="material-icons">gps_fixed</i>
+                </div>
+                <div class="boundary-details">
+                    <div class="boundary-title">Boundary Coordinates</div>
+                    <div class="coordinates">
+                        <div class="coord-pair">
+                            <span class="coord-label">Lat:</span>
+                            <span>26.8112° - 26.8339°</span>
+                        </div>
+                        <div class="coord-pair">
+                            <span class="coord-label">Lon:</span>
+                            <span>78.3752° - 78.4487°</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-header">
+                        <div class="result-icon">
+                            <i class="material-icons">calendar_today</i>
+                        </div>
+                        <div class="result-title">Year_2020_month_10</div>
+                    </div>
+                    <div class="result-content">
+                        <img class="result-image"
+                            src="img/4A.png"
+                            alt="River boundary in October 2020">
+                        <div class="result-features">
+                            <div class="feature">
+                                <i class="material-icons feature-icon">waves</i>
+                                <div class="feature-text">Post-monsoon flow pattern</div>
+                            </div>
+                            <div class="feature">
+                                <i class="material-icons feature-icon">straighten</i>
+                                <div class="feature-text">Wider channel detected</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-header">
+                        <div class="result-icon">
+                            <i class="material-icons">calendar_today</i>
+                        </div>
+                        <div class="result-title">Year_2020_month_06</div>
+                    </div>
+                    <div class="result-content">
+                        <img class="result-image"
+                            src="img/4B.png"
+                            alt="River boundary in June 2020">
+                        <div class="result-features">
+                            <div class="feature">
+                                <i class="material-icons feature-icon">water</i>
+                                <div class="feature-text">Pre-monsoon flow pattern</div>
+                            </div>
+                            <div class="feature">
+                                <i class="material-icons feature-icon">compare_arrows</i>
+                                <div class="feature-text">Narrower channel visible</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-header">
+                        <div class="result-icon">
+                            <i class="material-icons">calendar_today</i>
+                        </div>
+                        <div class="result-title">Year_2008_month_10</div>
+                    </div>
+                    <div class="result-content">
+                        <img class="result-image"
+                            src="img/4C.png"
+                            alt="River boundary in October 2008">
+                        <div class="result-features">
+                            <div class="feature">
+                                <i class="material-icons feature-icon">history</i>
+                                <div class="feature-text">Historical comparison</div>
+                            </div>
+                            <div class="feature">
+                                <i class="material-icons feature-icon">trending_up</i>
+                                <div class="feature-text">Channel migration observed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-card composite-result">
+                    <div class="composite-image">
+                        <div class="result-header">
+                            <div class="result-icon">
+                                <i class="material-icons">layers</i>
+                            </div>
+                            <div class="result-title">Output of Boundary 2 (All Layers Active)</div>
+                        </div>
+                        <img class="result-image"
+                            src="img/4D.png"
+                            alt="Composite output of boundary 2">
+                        <div class="result-features">
+                            <div class="feature">
+                                <i class="material-icons feature-icon">timeline</i>
+                                <div class="feature-text"><span class="highlight">12-year temporal analysis</span>
+                                    reveals morphological changes</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="composite-details">
+                        <div class="composite-features">
+                            <div class="feature">
+                                <i class="material-icons feature-icon">analytics</i>
+                                <div class="feature-text"><span class="highlight">Seasonal variations</span> clearly
+                                    distinguishable</div>
+                            </div>
+                            <div class="feature">
+                                <i class="material-icons feature-icon">insights</i>
+                                <div class="feature-text"><span class="highlight">Channel migration</span> patterns
+                                    identified</div>
+                            </div>
+                            <div class="feature">
+                                <i class="material-icons feature-icon">compare</i>
+                                <div class="feature-text"><span class="highlight">Width variations</span> correlate with
+                                    seasonal flow</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

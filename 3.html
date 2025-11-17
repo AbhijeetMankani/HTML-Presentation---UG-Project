@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Area</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+                url('img/bg-3.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 50px 70px 30px;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #12405b;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            padding: 0 70px 50px;
+            gap: 30px;
+        }
+
+        .river-info {
+            display: flex;
+            width: 100%;
+            gap: 30px;
+        }
+
+        .river-details {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .river-map {
+            flex: 2;
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-card {
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(18, 64, 91, 0.1);
+            background-color: rgba(18, 64, 91, 0.08);
+        }
+
+        .info-icon {
+            background-color: #12405b;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .info-content {
+            flex-grow: 1;
+        }
+
+        .info-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #12405b;
+            margin-bottom: 10px;
+        }
+
+        .info-desc {
+            font-size: 20px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .highlight {
+            color: #12405b;
+            font-weight: 600;
+        }
+
+        .map-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #12405b;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .map-image {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .map-caption {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">STUDY AREA</h1>
+        </div>
+        <div class="content">
+            <div class="river-info">
+                <div class="river-details">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="material-icons">terrain</i>
+                        </div>
+                        <div class="info-content">
+                            <div class="info-title">Origin</div>
+                            <div class="info-desc">Rises from the <span class="highlight">Aravalli hills</span> near
+                                Devgarh in the <span class="highlight">Rajsamand district</span></div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="material-icons">route</i>
+                        </div>
+                        <div class="info-content">
+                            <div class="info-title">Flow Path</div>
+                            <div class="info-desc">Flows through tehsils of <span class="highlight">Raipur, Mandal,
+                                    Bhilwara</span> and <span class="highlight">Kotri</span></div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="material-icons">merge_type</i>
+                        </div>
+                        <div class="info-content">
+                            <div class="info-title">Confluence</div>
+                            <div class="info-desc">Joins the river <span class="highlight">Banas</span> at Nandrai in
+                                Kotri tehsil</div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="material-icons">water_drop</i>
+                        </div>
+                        <div class="info-content">
+                            <div class="info-title">Infrastructure</div>
+                            <div class="info-desc">The <span class="highlight">Meja dam</span> on the Kothari river
+                                provides drinking water to the <span class="highlight">Bhilwara district</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="river-map">
+                    <div class="map-title">Kothari River System</div>
+                    <img class="map-image" src="img/Picture1.png" alt="Satellite image of Kothari River">
+                    <div class="map-caption">Satellite view of the Kothari River system</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+                url('img/bg-12.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 50px 70px 30px;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #12405b;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            padding: 0 70px 50px;
+            gap: 30px;
+        }
+
+        .insights-container {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .applications-container {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .insight-card {
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .insight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(18, 64, 91, 0.1);
+            background-color: rgba(18, 64, 91, 0.08);
+        }
+
+        .insight-icon {
+            background-color: #12405b;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .insight-icon i {
+            font-size: 32px;
+        }
+
+        .insight-content {
+            flex-grow: 1;
+        }
+
+        .insight-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #12405b;
+            margin-bottom: 10px;
+        }
+
+        .insight-desc {
+            font-size: 20px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .highlight {
+            color: #12405b;
+            font-weight: 600;
+        }
+
+        .application-card {
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            transition: all 0.3s ease;
+        }
+
+        .application-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(18, 64, 91, 0.1);
+            background-color: rgba(18, 64, 91, 0.08);
+        }
+
+        .application-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .application-icon {
+            background-color: #12405b;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .application-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #12405b;
+        }
+
+        .application-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex-grow: 1;
+        }
+
+        .application-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .application-item-icon {
+            color: #12405b;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .application-item-text {
+            font-size: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">DISCUSSION</h1>
+        </div>
+        <div class="content">
+            <div class="insights-container">
+                <div class="insight-card">
+                    <div class="insight-icon">
+                        <i class="material-icons">precision_manufacturing</i>
+                    </div>
+                    <div class="insight-content">
+                        <div class="insight-title">Foundation for Analysis</div>
+                        <div class="insight-desc">
+                            <span class="highlight">Accurate river extraction</span> provides essential foundation for
+                            detailed morphological and hydrological assessment
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-icon">
+                        <i class="material-icons">straighten</i>
+                    </div>
+                    <div class="insight-content">
+                        <div class="insight-title">Quantification of River Morphology</div>
+                        <div class="insight-desc">
+                            Enables precise measurement of <span class="highlight">length, width, sinuosity</span> and
+                            other key morphological parameters
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-icon">
+                        <i class="material-icons">water</i>
+                    </div>
+                    <div class="insight-content">
+                        <div class="insight-title">Hydrological Integration</div>
+                        <div class="insight-desc">
+                            Integration with hydrological models allows effective <span class="highlight">simulation of
+                                water flow</span> and flood routing
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="applications-container">
+                <div class="application-card">
+                    <div class="application-header">
+                        <div class="application-icon">
+                            <i class="material-icons">policy</i>
+                        </div>
+                        <div class="application-title">Policy Applications</div>
+                    </div>
+                    <div class="application-list">
+                        <div class="application-item">
+                            <i class="material-icons application-item-icon">location_city</i>
+                            <div class="application-item-text">
+                                <span class="highlight">Urban Planning</span>
+                            </div>
+                        </div>
+                        <div class="application-item">
+                            <i class="material-icons application-item-icon">construction</i>
+                            <div class="application-item-text">
+                                <span class="highlight">Infrastructure Development</span>
+                            </div>
+                        </div>
+                        <div class="application-item">
+                            <i class="material-icons application-item-icon">warning</i>
+                            <div class="application-item-text">
+                                <span class="highlight">Disaster Risk Reduction</span>
+                            </div>
+                        </div>
+                        <div class="application-item">
+                            <i class="material-icons application-item-icon">eco</i>
+                            <div class="application-item-text">
+                                <span class="highlight">Ecosystem Conservation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

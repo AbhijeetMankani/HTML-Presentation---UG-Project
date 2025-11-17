@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivers & The Importance of Accurate Mapping</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+                url('img/bg-2.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 50px 70px 30px;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #12405b;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            padding: 0 70px 50px;
+            gap: 30px;
+        }
+
+        .section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #12405b;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 12px;
+            font-size: 32px;
+        }
+
+        .points-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex-grow: 1;
+        }
+
+        .point {
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .point:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(18, 64, 91, 0.1);
+            background-color: rgba(18, 64, 91, 0.08);
+        }
+
+        .point-icon {
+            background-color: #12405b;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .point-content {
+            flex-grow: 1;
+        }
+
+        .point-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #12405b;
+            margin-bottom: 5px;
+        }
+
+        .point-desc {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .highlight {
+            color: #12405b;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">RIVERS & THE IMPORTANCE OF ACCURATE MAPPING</h1>
+        </div>
+        <div class="content">
+            <div class="section">
+                <div class="section-title">
+                    <i class="material-icons">water</i>
+                    Importance of Rivers
+                </div>
+                <div class="points-container">
+                    <div class="point">
+                        <div class="point-icon">
+                            <i class="material-icons">eco</i>
+                        </div>
+                        <div class="point-content">
+                            <div class="point-title">Vital Ecosystems</div>
+                            <div class="point-desc">Support diverse plant and animal life, contributing to environmental
+                                balance</div>
+                        </div>
+                    </div>
+                    <div class="point">
+                        <div class="point-icon">
+                            <i class="material-icons">water_drop</i>
+                        </div>
+                        <div class="point-content">
+                            <div class="point-title">Essential Resource</div>
+                            <div class="point-desc">Provide freshwater for drinking, agriculture, and industrial
+                                operations</div>
+                        </div>
+                    </div>
+                    <div class="point">
+                        <div class="point-icon">
+                            <i class="material-icons">landscape</i>
+                        </div>
+                        <div class="point-content">
+                            <div class="point-title">Landscape Shapers</div>
+                            <div class="point-desc">Natural forces that carve valleys and define topography over time
+                            </div>
+                        </div>
+                    </div>
+                    <div class="point">
+                        <div class="point-icon">
+                            <i class="material-icons">location_city</i>
+                        </div>
+                        <div class="point-content">
+                            <div class="point-title">Economic Centers</div>
+                            <div class="point-desc">Historically central to human settlements, transportation, and trade
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">
+                    <i class="material-icons">map</i>
+                    Why Accurate Mapping Matters
+                </div>
+                <div class="points-container">
+                    <div class="point">
+                        <div class="point-icon">
+                            <i class="material-icons">manage_accounts</i>
+                        </div>
+                        <div class="point-content">
+                            <div class="point-title">Resource Management</div>
+                            <div class="point-desc">Essential for effective conservation and sustainable water resource
+                                management</div>
+                        </div>
+                    </div>
+                    <div class="point">
+                        <div class="point-icon">
+                            <i class="material-icons">nature_people</i>
+                        </div>
+                        <div class="point-content">
+                            <div class="point-title">Habitat Protection</div>
+                            <div class="point-desc">Helps identify and protect critical aquatic and riparian ecosystems
+                            </div>
+                        </div>
+                    </div>
+                    <div class="point">
+                        <div class="point-icon">
+                            <i class="material-icons">warning</i>
+                        </div>
+                        <div class="point-content">
+                            <div class="point-title">Hazard Mitigation</div>
+                            <div class="point-desc">Critical for identifying flood-prone areas and pollution sources
+                            </div>
+                        </div>
+                    </div>
+                    <div class="point">
+                        <div class="point-icon">
+                            <i class="material-icons">location_city</i>
+                        </div>
+                        <div class="point-content">
+                            <div class="point-title">Urban Planning</div>
+                            <div class="point-desc">Guides sustainable development and infrastructure planning</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

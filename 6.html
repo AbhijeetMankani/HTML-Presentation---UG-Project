@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segmentation & River Extraction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+                url('img/bg-6.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 50px 70px 30px;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #12405b;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            padding: 0 70px 50px;
+            gap: 30px;
+        }
+
+        .section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(18, 64, 91, 0.1);
+            background-color: rgba(18, 64, 91, 0.08);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .card-icon {
+            background-color: #12405b;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .card-icon i {
+            font-size: 32px;
+        }
+
+        .card-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #12405b;
+        }
+
+        .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .technique {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .technique-icon {
+            color: #12405b;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .technique-text {
+            font-size: 20px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .highlight {
+            color: #12405b;
+            font-weight: 600;
+        }
+
+        .image-container {
+            margin-top: auto;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 280px;
+            object-fit: cover;
+            justify-content: center;
+            display: flex;
+        }
+
+        .image {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">SEGMENTATION & RIVER EXTRACTION</h1>
+        </div>
+        <div class="content">
+            <div class="section">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="material-icons">grid_on</i>
+                        </div>
+                        <div class="card-title">Segmentation</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="technique">
+                            <i class="material-icons technique-icon">tune</i>
+                            <div class="technique-text">
+                                <span class="highlight">Thresholding</span> to separate water pixels from background
+                            </div>
+                        </div>
+                        <div class="technique">
+                            <i class="material-icons technique-icon">border_outer</i>
+                            <div class="technique-text">
+                                <span class="highlight">Edge detection</span> to identify river boundaries
+                            </div>
+                        </div>
+                        <div class="technique">
+                            <i class="material-icons technique-icon">bubble_chart</i>
+                            <div class="technique-text">
+                                <span class="highlight">Clustering algorithms</span> to group similar pixels
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img class="image" src="img\Picture2B.png" alt="River segmentation visualization">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="material-icons">waves</i>
+                        </div>
+                        <div class="card-title">River Extraction</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="technique">
+                            <i class="material-icons technique-icon">gesture</i>
+                            <div class="technique-text">
+                                <span class="highlight">Active contour models</span> for precise river tracing
+                            </div>
+                        </div>
+                        <div class="technique">
+                            <i class="material-icons technique-icon">transform</i>
+                            <div class="technique-text">
+                                <span class="highlight">Morphological operations</span> to enhance river features
+                            </div>
+                        </div>
+                        <div class="technique">
+                            <i class="material-icons technique-icon">polyline</i>
+                            <div class="technique-text">
+                                <span class="highlight">Vectorization</span> to convert raster to vector format
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img class="image" src="img\Picture3C1.png" alt="River extraction result">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

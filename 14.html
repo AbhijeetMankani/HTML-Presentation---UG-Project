@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Work</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+                url('img/bg-14.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 50px 70px 30px;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #12405b;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 70px 50px;
+        }
+
+        .future-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            flex-grow: 1;
+        }
+
+        .future-card {
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .future-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(18, 64, 91, 0.1);
+            background-color: rgba(18, 64, 91, 0.08);
+        }
+
+        .future-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .future-icon {
+            background-color: #12405b;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .future-icon i {
+            font-size: 32px;
+        }
+
+        .future-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #12405b;
+        }
+
+        .future-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .key-point {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .point-icon {
+            color: #12405b;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .point-text {
+            font-size: 20px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .highlight {
+            color: #12405b;
+            font-weight: 600;
+        }
+
+        .main-future {
+            grid-column: span 2;
+            background-color: rgba(18, 64, 91, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .main-icon {
+            background-color: #12405b;
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            flex-shrink: 0;
+        }
+
+        .main-icon i {
+            font-size: 40px;
+        }
+
+        .main-text {
+            font-size: 26px;
+            line-height: 1.5;
+            color: #12405b;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">FUTURE WORK</h1>
+        </div>
+        <div class="content">
+            <div class="future-grid">
+                <div class="future-card">
+                    <div class="future-header">
+                        <div class="future-icon">
+                            <i class="material-icons">dataset</i>
+                        </div>
+                        <div class="future-title">Data Integration</div>
+                    </div>
+                    <div class="future-content">
+                        <div class="key-point">
+                            <i class="material-icons point-icon">radar</i>
+                            <div class="point-text">
+                                <span class="highlight">LiDAR integration</span> for enhanced 3D mapping
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <i class="material-icons point-icon">flight</i>
+                            <div class="point-text">
+                                <span class="highlight">Drone imagery</span> for high-resolution local analysis
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <i class="material-icons point-icon">merge_type</i>
+                            <div class="point-text">
+                                <span class="highlight">Multi-source data fusion</span> for comprehensive insights
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="future-card">
+                    <div class="future-header">
+                        <div class="future-icon">
+                            <i class="material-icons">psychology</i>
+                        </div>
+                        <div class="future-title">Advanced Analytics</div>
+                    </div>
+                    <div class="future-content">
+                        <div class="key-point">
+                            <i class="material-icons point-icon">smart_toy</i>
+                            <div class="point-text">
+                                <span class="highlight">Machine learning</span> for pattern recognition
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <i class="material-icons point-icon">auto_awesome</i>
+                            <div class="point-text">
+                                <span class="highlight">Deep learning</span> for complex feature detection
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <i class="material-icons point-icon">insights</i>
+                            <div class="point-text">
+                                <span class="highlight">Predictive modeling</span> for change forecasting
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="future-card">
+                    <div class="future-header">
+                        <div class="future-icon">
+                            <i class="material-icons">speed</i>
+                        </div>
+                        <div class="future-title">Automation & Scaling</div>
+                    </div>
+                    <div class="future-content">
+                        <div class="key-point">
+                            <i class="material-icons point-icon">autorenew</i>
+                            <div class="point-text">
+                                <span class="highlight">Automated workflows</span> for processing efficiency
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <i class="material-icons point-icon">all_inclusive</i>
+                            <div class="point-text">
+                                <span class="highlight">Large-scale deployment</span> for regional analysis
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <i class="material-icons point-icon">update</i>
+                            <div class="point-text">
+                                <span class="highlight">Real-time monitoring</span> for dynamic assessment
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="future-card">
+                    <div class="future-header">
+                        <div class="future-icon">
+                            <i class="material-icons">verified</i>
+                        </div>
+                        <div class="future-title">Validation & Visualization</div>
+                    </div>
+                    <div class="future-content">
+                        <div class="key-point">
+                            <i class="material-icons point-icon">fact_check</i>
+                            <div class="point-text">
+                                <span class="highlight">Enhanced validation</span> techniques for accuracy
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <i class="material-icons point-icon">analytics</i>
+                            <div class="point-text">
+                                <span class="highlight">Uncertainty analysis</span> for reliability assessment
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <i class="material-icons point-icon">dashboard</i>
+                            <div class="point-text">
+                                <span class="highlight">User-friendly tools</span> for stakeholder access
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-future">
+                    <div class="main-icon">
+                        <i class="material-icons">rocket_launch</i>
+                    </div>
+                    <div class="main-text">
+                        Future research will focus on creating more robust, automated, and accessible river detection
+                        systems through advanced algorithms and multi-source data integration.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

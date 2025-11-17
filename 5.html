@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Acquisition & Pre-processing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+                url('img/bg-5.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 50px 70px 30px;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #12405b;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            padding: 0 70px 50px;
+            gap: 30px;
+        }
+
+        .section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgba(18, 64, 91, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(18, 64, 91, 0.1);
+            background-color: rgba(18, 64, 91, 0.08);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .card-icon {
+            background-color: #12405b;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .card-icon i {
+            font-size: 32px;
+        }
+
+        .card-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #12405b;
+        }
+
+        .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            color: #12405b;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-size: 20px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .highlight {
+            color: #12405b;
+            font-weight: 600;
+        }
+
+        .image-container {
+            margin-top: auto;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 280px;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">DATA ACQUISITION & PRE-PROCESSING</h1>
+        </div>
+        <div class="content">
+            <div class="section">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="material-icons">satellite</i>
+                        </div>
+                        <div class="card-title">Data Acquisition</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="feature-list">
+                            <div class="feature">
+                                <i class="material-icons feature-icon">photo_camera</i>
+                                <div class="feature-text">
+                                    <span class="highlight">High-resolution satellite imagery</span> covering study area
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="material-icons feature-icon">flight</i>
+                                <div class="feature-text">
+                                    <span class="highlight">Aerial photographs</span> for detailed local analysis
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="material-icons feature-icon">calendar_month</i>
+                                <div class="feature-text">
+                                    Multi-temporal data to track changes over time
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img class="image" src="img/Picture1.png" alt="Satellite image of river">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="material-icons">tune</i>
+                        </div>
+                        <div class="card-title">Pre-processing</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="feature-list">
+                            <div class="feature">
+                                <i class="material-icons feature-icon">contrast</i>
+                                <div class="feature-text">
+                                    <span class="highlight">Contrast adjustment</span> to enhance water body visibility
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="material-icons feature-icon">noise_control_off</i>
+                                <div class="feature-text">
+                                    <span class="highlight">Noise reduction</span> to improve image quality
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="material-icons feature-icon">filter</i>
+                                <div class="feature-text">
+                                    Spectral filtering to isolate water features
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img class="image" src="img\5B.png" alt="Processed river image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

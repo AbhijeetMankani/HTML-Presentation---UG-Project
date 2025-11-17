@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>River Detection and Spatial Analysis</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #ffffff;
+		}
+
+		.slide {
+			width: 1280px;
+			height: 720px;
+			position: relative;
+			overflow: hidden;
+			background: linear-gradient(rgba(18, 64, 91, 0.85), rgba(18, 64, 91, 0.85)),
+				url('img/river bg.jpg');
+			background-size: cover;
+			background-position: center;
+			display: flex;
+		}
+
+		.left-content {
+			width: 60%;
+			padding-left: 70px;
+			padding-right: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.right-content {
+			width: 40%;
+			padding-left: 20px;
+			padding-right: 70px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.title {
+			font-size: 60px;
+			font-weight: 700;
+			line-height: 1.2;
+			margin-bottom: 30px;
+			color: #ffffff;
+		}
+
+		.subtitle {
+			font-size: 20px;
+			font-weight: 400;
+			margin-bottom: 40px;
+			color: #e0f2f1;
+		}
+
+		.author {
+			font-size: 22px;
+			margin-bottom: 10px;
+			color: #b2dfdb;
+		}
+
+		.roll-number {
+			font-size: 20px;
+			color: #b2dfdb;
+		}
+
+		.keywords {
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 12px;
+			padding: 25px;
+		}
+
+		.keyword {
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+
+		.keyword:last-child {
+			margin-bottom: 0;
+		}
+
+		.keyword i {
+			margin-right: 15px;
+			color: #80cbc4;
+		}
+
+		.keyword-text {
+			font-size: 20px;
+			font-weight: 600;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="slide">
+		<div class="left-content">
+			<h1 class="title">RIVER DETECTION AND SPATIAL ANALYSIS USING IMAGE PROCESSING</h1>
+			<div class="subtitle">UG Project Report</div>
+			<div class="author">ABHIJEET SUNIL MANKANI</div>
+			<div class="roll-number">Roll No: 22065004</div>
+		</div>
+		<div class="right-content">
+			<div class="keywords">
+				<div class="keyword">
+					<i class="material-icons">water</i>
+					<div class="keyword-text">River Network Extraction</div>
+				</div>
+				<div class="keyword">
+					<i class="material-icons">satellite</i>
+					<div class="keyword-text">Satellite Image Processing</div>
+				</div>
+				<div class="keyword">
+					<i class="material-icons">map</i>
+					<div class="keyword-text">GIS Spatial Analysis</div>
+				</div>
+				<div class="keyword">
+					<i class="material-icons">code</i>
+					<div class="keyword-text">Image Segmentation Algorithms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
